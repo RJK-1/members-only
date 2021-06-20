@@ -1,0 +1,25 @@
+<div class="section">
+  <h1 class="title is-2 has-text-primary has-text-centered">Posts</h1>
+    <% @posts.each do |post| %>
+      <div class="columns is-centered">
+        <div class="column is-three-quarters">
+          <div class="box has-background-light">
+            <article class="media-content">
+              <div class="content">
+                <strong><%= post.title %></strong>
+                <div class="content is-pulled-right">
+                  <i>Last Updated: <small><%= post.updated_at %></small></i>
+                </div>
+                <% if user_signed_in? %>
+                  <i><small>  By <%= post.user.name %></i></small><br><br>
+                  <%= post.body %>
+                <% else %>
+                <br><br><%= post.body %>
+                <% end %>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>
