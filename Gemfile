@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.8'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
+gem 'bulma-rails', '~> 0.9.1'
+gem 'simple_form', '~> 5.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

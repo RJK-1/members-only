@@ -13,6 +13,23 @@
   </head>
 
   <body>
+    <nav class="navbar is-primary">
+      <div class="navbar-start">
+        <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-4">Members Only</h1>
+        <% end %>
+      </div>
+      <div class="navbar-end">
+        <% if user_signed_in? %>
+          <%= link_to 'New Post', new_post_path, class: "navbar-item" %>
+          <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "navbar-item" %>
+        <% else %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: "navbar-item" %>
+          <%= link_to 'Sign In', new_user_session_path, class: "navbar-item" %>
+        <% end %>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
+
