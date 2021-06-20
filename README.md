@@ -1,24 +1,17 @@
-# README
+Members-only project, through The Odin Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project aimed to familiarize students with
+the Devise gem, for managing logging in users.
 
-Things you may want to cover:
+The main task was to enable logged in users to
+see the author of a post, but not for those not
+logged in.
 
-* Ruby version
+The app used 2 models, Post and User (through Devise)
+Users had_many posts, and posts belong_to users.
 
-* System dependencies
+The database used was postgreSQL, for deploying to
+heroku, link:
 
-* Configuration
+https://afternoon-sea-86812.herokuapp.com
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
